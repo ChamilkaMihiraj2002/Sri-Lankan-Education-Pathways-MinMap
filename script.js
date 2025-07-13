@@ -1,180 +1,245 @@
 const data = {
     start: [
-        { id: 'ol_passed', text: 'O/L Passed', image: 'https://images.pexels.com/photos/1591061/pexels-photo-1591061.jpeg?auto=compress&cs=tinysrgb&w=400' }, // Classroom setting
-        { id: 'ol_failed', text: 'O/L Failed', image: 'https://images.pexels.com/photos/6147369/pexels-photo-6147369.jpeg?auto=compress&cs=tinysrgb&w=400' } // Study struggle
+        { id: 'ol', text: 'O/L', image: 'https://images.pexels.com/photos/1591061/pexels-photo-1591061.jpeg?auto=compress&cs=tinysrgb&w=400' },
+        { id: 'al', text: 'A/L', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcl1v1fU74GIfNWzAGYuNdItJs3bc4TbM9hQ&s' },
+        { id: 'university', text: 'University', image: 'https://images.pexels.com/photos/207684/pexels-photo-207684.jpeg?auto=compress&cs=tinysrgb&w=400' }
+    ],
+    ol: [
+        { id: 'ol_passed', text: 'O/L Passed', image: 'https://images.pexels.com/photos/1591061/pexels-photo-1591061.jpeg?auto=compress&cs=tinysrgb&w=400' },
+        { id: 'ol_failed', text: 'O/L Failed', image: 'https://images.pexels.com/photos/6147369/pexels-photo-6147369.jpeg?auto=compress&cs=tinysrgb&w=400' }
     ],
     ol_passed: [
-        { id: 'al', text: 'A/L', image: 'https://images.pexels.com/photos/256417/pexels-photo-256417.jpeg?auto=compress&cs=tinysrgb&w=400' }, // Students studying
-        { id: 'vta_tech_etc_ol', text: 'Vocational Training', image: 'https://images.pexels.com/photos/3184644/pexels-photo-3184644.jpeg?auto=compress&cs=tinysrgb&w=400' } // Workshop
+        { id: 'al', text: 'A/L', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcl1v1fU74GIfNWzAGYuNdItJs3bc4TbM9hQ&s' },
+        { id: 'vta_tech_etc_ol', text: 'Vocational Training', image: 'https://images.pexels.com/photos/3184644/pexels-photo-3184644.jpeg?auto=compress&cs=tinysrgb&w=400' }
     ],
     ol_failed: [
-        { id: 'vta_tech_etc_ol_failed', text: 'Vocational Training', image: 'https://images.pexels.com/photos/5212353/pexels-photo-5212353.jpeg?auto=compress&cs=tinysrgb&w=400' } // Technical training
+        { id: 'vta_tech_etc_ol_failed', text: 'Vocational Training', image: 'https://images.pexels.com/photos/5212353/pexels-photo-5212353.jpeg?auto=compress&cs=tinysrgb&w=400' }
     ],
     vta_tech_etc_ol: [
-        { id: 'vta_ol', text: 'VTA', image: 'https://images.pexels.com/photos/5905709/pexels-photo-5905709.jpeg?auto=compress&cs=tinysrgb&w=400' }, // Vocational training
-        { id: 'technical_college_ol', text: 'Technical College', image: 'https://images.pexels.com/photos/5212338/pexels-photo-5212338.jpeg?auto=compress&cs=tinysrgb&w=400' }, // Technical lab
-        { id: 'jerman_tech_ol', text: 'German Tech', image: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=400' }, // Engineering workshop
-        { id: 'korean_tech_ol', text: 'Korean Tech', image: 'https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=400' }, // Tech training
-        { id: 'naita_ol', text: 'NAITA', image: 'https://images.pexels.com/photos/3184296/pexels-photo-3184296.jpeg?auto=compress&cs=tinysrgb&w=400' }, // Apprenticeship
-        { id: 'hotel_school_ol', text: 'Hotel School', image: 'https://images.pexels.com/photos/261102/pexels-photo-261102.jpeg?auto=compress&cs=tinysrgb&w=400' } // Hospitality
+        { id: 'vta_ol', text: 'VTA', image: 'https://images.pexels.com/photos/5905709/pexels-photo-5905709.jpeg?auto=compress&cs=tinysrgb&w=400' },
+        { id: 'technical_college_ol', text: 'Technical College', image: 'https://images.pexels.com/photos/5212338/pexels-photo-5212338.jpeg?auto=compress&cs=tinysrgb&w=400' },
+        { id: 'jerman_tech_ol', text: 'German Tech', image: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=400' },
+        { id: 'korean_tech_ol', text: 'Korean Tech', image: 'https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=400' },
+        { id: 'naita_ol', text: 'NAITA', image: 'https://images.pexels.com/photos/3184296/pexels-photo-3184296.jpeg?auto=compress&cs=tinysrgb&w=400' },
+        { id: 'hotel_school_ol', text: 'Hotel School', image: 'https://images.pexels.com/photos/261102/pexels-photo-261102.jpeg?auto=compress&cs=tinysrgb&w=400' }
     ],
     vta_tech_etc_ol_failed: [
-        { id: 'vta_olf', text: 'VTA', image: 'https://images.pexels.com/photos/5905700/pexels-photo-5905700.jpeg?auto=compress&cs=tinysrgb&w=400' }, // Vocational training
-        { id: 'technical_college_olf', text: 'Technical College', image: 'https://images.pexels.com/photos/5212339/pexels-photo-5212339.jpeg?auto=compress&cs=tinysrgb&w=400' }, // Technical lab
-        { id: 'jerman_tech_olf', text: 'German Tech', image: 'https://images.pexels.com/photos/3184293/pexels-photo-3184293.jpeg?auto=compress&cs=tinysrgb&w=400' }, // Engineering
-        { id: 'korean_tech_olf', text: 'Korean Tech', image: 'https://images.pexels.com/photos/3184294/pexels-photo-3184294.jpeg?auto=compress&cs=tinysrgb&w=400' }, // Tech training
-        { id: 'naita_olf', text: 'NAITA', image: 'https://images.pexels.com/photos/3184297/pexels-photo-3184297.jpeg?auto=compress&cs=tinysrgb&w=400' }, // Apprenticeship
-        { id: 'hotel_school_olf', text: 'Hotel School', image: 'https://images.pexels.com/photos/261101/pexels-photo-261101.jpeg?auto=compress&cs=tinysrgb&w=400' } // Hospitality
+        { id: 'vta_olf', text: 'VTA', image: 'https://images.pexels.com/photos/5905700/pexels-photo-5905700.jpeg?auto=compress&cs=tinysrgb&w=400' },
+        { id: 'technical_college_olf', text: 'Technical College', image: 'https://images.pexels.com/photos/5212339/pexels-photo-5212339.jpeg?auto=compress&cs=tinysrgb&w=400' },
+        { id: 'jerman_tech_olf', text: 'German Tech', image: 'https://images.pexels.com/photos/3184293>auto=compress&cs=tinysrgb&w=400' },
+        { id: 'korean_tech_olf', text: 'Korean Tech', image: 'https://images.pexels.com/photos/3184294/pexels-photo-3184294.jpeg?auto=compress&cs=tinysrgb&w=400' },
+        { id: 'naita_olf', text: 'NAITA', image: 'https://images.pexels.com/photos/3184297/pexels-photo-3184297.jpeg?auto=compress&cs=tinysrgb&w=400' },
+        { id: 'hotel_school_olf', text: 'Hotel School', image: 'https://images.pexels.com/photos/261101/pexels-photo-261101.jpeg?auto=compress&cs=tinysrgb&w=400' }
     ],
     al: [
-        { id: 'al_passed', text: 'A/L Passed', image: 'https://images.pexels.com/photos/3769021/pexels-photo-3769021.jpeg?auto=compress&cs=tinysrgb&w=400' }, // Graduation
-        { id: 'al_failed', text: 'A/L Failed', image: 'https://images.pexels.com/photos/3931638/pexels-photo-3931638.jpeg?auto=compress&cs=tinysrgb&w=400' }, // Study struggle
-        { id: 'no_uni', text: 'Passed, but no University', image: 'https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=400' } // Career planning
+        { id: 'al_passed', text: 'A/L Passed', image: 'https://images.pexels.com/photos/3769021/pexels-photo-3769021.jpeg?auto=compress&cs=tinysrgb&w=400' },
+        { id: 'al_failed', text: 'A/L Failed', image: 'https://images.pexels.com/photos/3931638/pexels-photo-3931638.jpeg?auto=compress&cs=tinysrgb&w=400' },
+        { id: 'no_uni', text: 'Passed, but no University', image: 'https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=400' }
     ],
     al_passed: [
-        { id: 'state_uni', text: 'State Universities', image: 'https://images.pexels.com/photos/207684/pexels-photo-207684.jpeg?auto=compress&cs=tinysrgb&w=400' }, // University campus
-        { id: 'private_uni', text: 'Private Universities', image: 'https://images.pexels.com/photos/247819/pexels-photo-247819.jpeg?auto=compress&cs=tinysrgb&w=400' }, // Modern campus
-        { id: 'hnd_etc_al_passed', text: 'HND, KDU, Open Uni, etc.', image: 'https://images.pexels.com/photos/1181283/pexels-photo-1181283.jpeg?auto=compress&cs=tinysrgb&w=400' }, // Higher education
-        { id: 'job_abroad_al_passed', text: 'Apply Job/Abroad', image: 'https://images.pexels.com/photos/3727464/pexels-photo-3727464.jpeg?auto=compress&cs=tinysrgb&w=400' } // International work
+        { id: 'state_uni', text: 'State Universities', image: 'https://images.pexels.com/photos/207684/pexels-photo-207684.jpeg?auto=compress&cs=tinysrgb&w=400' },
+        { id: 'private_uni', text: 'Private Universities', image: 'https://images.pexels.com/photos/247819/pexels-photo-247819.jpeg?auto=compress&cs=tinysrgb&w=400' },
+        { id: 'hnd_etc_al_passed', text: 'HND, KDU, Open Uni, etc.', image: 'https://images.pexels.com/photos/1181283/pexels-photo-1181283.jpeg?auto=compress&cs=tinysrgb&w=400' },
+        { id: 'job_abroad_al_passed', text: 'Apply Job/Abroad', image: 'https://images.pexels.com/photos/3727464/pexels-photo-3727464.jpeg?auto=compress&cs=tinysrgb&w=400' }
     ],
     al_failed: [
-        { id: 'retry_al_failed', text: '2nd/3rd Attempt', image: 'https://images.pexels.com/photos/4050318/pexels-photo-4050318.jpeg?auto=compress&cs=tinysrgb&w=400' }, // Studying
-        { id: 'abroad_al_failed', text: 'Abroad (Job/Further Edu)', image: 'https://images.pexels.com/photos/3768131/pexels-photo-3768131.jpeg?auto=compress&cs=tinysrgb&w=400' }, // Travel/study abroad
-        { id: 'private_uni_foundation_al_failed', text: 'Private Uni (Foundation)', image: 'https://images.pexels.com/photos/267885/pexels-photo-267885.jpeg?auto=compress&cs=tinysrgb&w=400' }, // Foundation program
-        { id: 'vta_tech_etc_al_failed', text: 'Vocational Training', image: 'https://images.pexels.com/photos/3992870/pexels-photo-3992870.jpeg?auto=compress&cs=tinysrgb&w=400' } // Technical training
+        { id: 'retry_al_failed', text: '2nd/3rd Attempt', image: 'https://images.pexels.com/photos/4050318/pexels-photo-4050318.jpeg?auto=compress&cs=tinysrgb&w=400' },
+        { id: 'abroad_al_failed', text: 'Abroad (Job/Further Edu)', image: 'https://images.pexels.com/photos/3768131/pexels-photo-3768131.jpeg?auto=compress&cs=tinysrgb&w=400' },
+        { id: 'private_uni_foundation_al_failed', text: 'Private Uni (Foundation)', image: 'https://images.pexels.com/photos/267885/pexels-photo-267885.jpeg?auto=compress&cs=tinysrgb&w=400' },
+        { id: 'vta_tech_etc_al_failed', text: 'Vocational Training', image: 'https://images.pexels.com/photos/3992870/pexels-photo-3992870.jpeg?auto=compress&cs=tinysrgb&w=400' }
+    ],
+    university: [
+        { id: 'state_uni', text: 'State Universities', image: 'https://images.pexels.com/photos/207684/pexels-photo-207684.jpeg?auto=compress&cs=tinysrgb&w=400' },
+        { id: 'private_uni', text: 'Private Universities', image: 'https://images.pexels.com/photos/247819/pexels-photo-247819.jpeg?auto=compress&cs=tinysrgb&w=400' }
     ],
     private_uni: [
-        { id: 'nsbm_uni', text: 'NSBM University', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfVnx3iBftwmBBX1C7Qo2BHq90dgix7M4n2Q&s' }, // Modern campus (placeholder)
-        { id: 'nibm_uni', text: 'NIBM University', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3AhyEATU3RYtWWPWFk3knpoDaOO5LiGohEg&s' }, // Academic building (placeholder)
-        { id: 'cinec_uni', text: 'CINEC Campus', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfwfIgwQDaSd-lHzE7Oa3IktFWq__D1Tui6Q&s' }, // Maritime campus (placeholder)
-        { id: 'sliit_uni', text: 'SLIIT', image: 'https://upload.wikimedia.org/wikipedia/en/a/a6/SLIIT_Logo_Crest.png' } // Tech-focused campus (placeholder)
+        { id: 'nsbm_uni', text: 'NSBM University', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfVnx3iBftwmBBX1C7Qo2BHq90dgix7M4n2Q&s' },
+        { id: 'nibm_uni', text: 'NIBM University', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3AhyEATU3RYtWWPWFk3knpoDaOO5LiGohEg&s' },
+        { id: 'cinec_uni', text: 'CINEC Campus', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfwfIgwQDaSd-lHzE7Oa3IktFWq__D1Tui6Q&s' },
+        { id: 'sliit_uni', text: 'SLIIT', image: 'https://upload.wikimedia.org/wikipedia/en/a/a6/SLIIT_Logo_Crest.png' }
     ],
     hnd_etc_al_passed: [
-        { id: 'hnd_alp', text: 'HND', image: 'https://images.pexels.com/photos/1181472/pexels-photo-1181472.jpeg?auto=compress&cs=tinysrgb&w=400' }, // Higher education
-        { id: 'kdu_alp', text: 'KDU', image: 'https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=400' }, // Military university
-        { id: 'open_uni_alp', text: 'Open University', image: 'https://images.pexels.com/photos/220301/pexels-photo-220301.jpeg?auto=compress&cs=tinysrgb&w=400' }, // Online learning
-        { id: 'law_alp', text: 'Law College', image: 'https://images.pexels.com/photos/1023953/pexels-photo-1023953.jpeg?auto=compress&cs=tinysrgb&w=400' }, // Law library
-        { id: 'ocean_alp', text: 'Ocean University', image: 'https://images.pexels.com/photos/1007427/pexels-photo-1007427.jpeg?auto=compress&cs=tinysrgb&w=400' } // Maritime education
+        { id: 'hnd_alp', text: 'HND', image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/SLIATE_LOGO2.png/250px-SLIATE_LOGO2.png' },
+        { id: 'kdu_alp', text: 'KDU', image: 'https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=400' },
+        { id: 'open_uni_alp', text: 'Open University', image: 'https://upload.wikimedia.org/wikipedia/en/8/8e/Logo_ousl.jpg' },
+        { id: 'law_alp', text: 'Law College', image: 'https://images.pexels.com/photos/1023953/pexels-photo-1023953.jpeg?auto=compress&cs=tinysrgb&w=400' },
+        { id: 'ocean_alp', text: 'Ocean University', image: 'https://images.pexels.com/photos/1007427/pexels-photo-1007427.jpeg?auto=compress&cs=tinysrgb&w=400' }
     ],
     vta_tech_etc_al_failed: [
-        { id: 'vta_alf', text: '。即', image: 'https://images.pexels.com/photos/5905701/pexels-photo-5905701.jpeg?auto=compress&cs=tinysrgb&w=400' }, // Vocational training
-        { id: 'technical_college_alf', text: 'Technical College', image: 'https://images.pexels.com/photos/5212331/pexels-photo-5212331.jpeg?auto=compress&cs=tinysrgb&w=400' } // Technical lab
+        { id: 'vta_alf', text: 'VTA', image: 'https://images.pexels.com/photos/5905701/pexels-photo-5905701.jpeg?auto=compress&cs=tinysrgb&w=400' },
+        { id: 'technical_college_alf', text: 'Technical College', image: 'https://images.pexels.com/photos/5212331/pexels-photo-5212331.jpeg?auto=compress&cs=tinysrgb&w=400' }
     ],
     no_uni: [
-        { id: 'prof_qual_no_uni', text: 'Professional Qualifications', image: 'https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=400' }, // Professional setting
-        { id: 'abroad_no_uni', text: 'Abroad (Job/Further Edu)', image: 'https://images.pexels.com/photos/4344860/pexels-photo-4344860.jpeg?auto=compress&cs=tinysrgb&w=400' }, // International
-        { id: 'business_no_uni', text: 'Own Business', image: 'https://images.pexels.com/photos/3771089/pexels-photo-3771089.jpeg?auto=compress&cs=tinysrgb&w=400' }, // Entrepreneurship
-        { id: 'teaching_college_no_uni', text: 'Teaching College', image: 'https://images.pexels.com/photos/65175/pexels-photo-65175.jpeg?auto=compress&cs=tinysrgb&w=400' }, // Teaching
-        { id: 'hnd_kdu_open_uni_law_ocean_no_uni', text: 'Diplomas / Other', image: 'https://images.pexels.com/photos/1181280/pexels-photo-1181280.jpeg?auto=compress&cs=tinysrgb&w=400' } // Higher education
+        { id: 'prof_qual_no_uni', text: 'Professional Qualifications', image: 'https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=400' },
+        { id: 'abroad_no_uni', text: 'Abroad (Job/Further Edu)', image: 'https://images.pexels.com/photos/4344860/pexels-photo-4344860.jpeg?auto=compress&cs=tinysrgb&w=400' },
+        { id: 'business_no_uni', text: 'Own Business', image: 'https://images.pexels.com/photos/3771089/pexels-photo-3771089.jpeg?auto=compress&cs=tinysrgb&w=400' },
+        { id: 'teaching_college_no_uni', text: 'Teaching College', image: 'https://images.pexels.com/photos/65175/pexels-photo-65175.jpeg?auto=compress&cs=tinysrgb&w=400' },
+        { id: 'hnd_kdu_open_uni_law_ocean_no_uni', text: 'Diplomas / Other', image: 'https://images.pexels.com/photos/1181280/pexels-photo-1181280.jpeg?auto=compress&cs=tinysrgb&w=400' }
     ],
     hnd_kdu_open_uni_law_ocean_no_uni: [
-        { id: 'hnd_nu', text: 'HND', image: 'https://images.pexels.com/photos/1181473/pexels-photo-1181473.jpeg?auto=compress&cs=tinysrgb&w=400' }, // Higher education
-        { id: 'kdu_nu', text: 'KDU', image: 'https://images.pexels.com/photos/265088/pexels-photo-265088.jpeg?auto=compress&cs=tinysrgb&w=400' }, // Military university
-        { id: 'open_uni_nu', text: 'Open University', image: 'https://images.pexels.com/photos/220301/pexels-photo-220301.jpeg?auto=compress&cs=tinysrgb&w=400' }, // Online learning
-        { id: 'law_co_nu', text: 'Law College', image: 'https://images.pexels.com/photos/1023953/pexels-photo-1023953.jpeg?auto=compress&cs=tinysrgb&w=400' }, // Law library
-        { id: 'ocean_nu', text: 'Ocean University', image: 'https://images.pexels.com/photos/1007427/pexels-photo-1007427.jpeg?auto=compress&cs=tinysrgb&w=400' } // Maritime education
+        { id: 'hnd_nu', text: 'HND', image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/SLIATE_LOGO2.png/250px-SLIATE_LOGO2.png' },
+        { id: 'kdu_nu', text: 'KDU', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3HXGcKwX9W3EjsQ1Fg1zVJwKEbn175ue6gg&s' },
+        { id: 'open_uni_nu', text: 'Open University', image: 'https://upload.wikimedia.org/wikipedia/en/8/8e/Logo_ousl.jpg' },
+        { id: 'law_co_nu', text: 'Law College', image: 'https://upload.wikimedia.org/wikipedia/en/7/71/SL_Law_College_logo.png' },
+        { id: 'ocean_nu', text: 'Ocean University', image: 'https://images.pexels.com/photos/1007427/pexels-photo-1007427.jpeg?auto=compress&cs=tinysrgb&w=400' }
     ],
     state_uni: [
-        { id: 'uni_list_su', text: 'University List', image: 'https://images.pexels.com/photos/2982449/pexels-photo-2982449.jpeg?auto=compress&cs=tinysrgb&w=400' }, // University campus
-        { id: 'faculties_su', text: 'Faculties', image: 'https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=400' } // Academic library
+        { id: 'uni_list_su', text: 'University List', image: 'https://images.pexels.com/photos/2982449/pexels-photo-2982449.jpeg?auto=compress&cs=tinysrgb&w=400' },
+        { id: 'faculties_su', text: 'Faculties', image: 'https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=400' }
     ],
     uni_list_su: [
-        { id: 'colombo_uni', text: 'University of Colombo', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0GBULN5RoVaOiewrmVLknLkR-gNo_1dEqGg&s' }, // Historic campus
-        { id: 'peradeniya_uni', text: 'University of Peradeniya', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWr1zRDOU2CPOFKRHRsKq1rRCcWakAJjzFiA&s' }, // Scenic campus
-        { id: 'jpura_uni', text: 'University of Sri J\'pura', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStBrDhpxvFrsPg2BIH7NVfeOdnEFKriTOnIw&s' }, // Modern campus
-        { id: 'kelaniya_uni', text: 'University of Kelaniya', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRl_acjSoltV9Ob39Y-mm5YWMeRRL8bE32lKQ&s' }, // Academic building
-        { id: 'moratu_uni', text: 'University of Moratuwa', image: 'https://upload.wikimedia.org/wikipedia/en/6/60/University_of_Moratuwa_logo.png' }, // Tech-focused campus
-        { id: 'abara_uni', text: 'Sabaragamuwa University', image: 'https://upload.wikimedia.org/wikipedia/en/5/5a/Logo-SUSL.png' }, // Rural campus
-        { id: 'ruhuna_uni', text: 'University of Ruhuna', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUfdX0GQM2zb-6Ouq-eh7uLMC3kz37GWngBw&s' }, // Coastal campus
-        { id: 'wayaba_uni', text: 'Wayamba University', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_fwIh0mPLesAR00mqa8mXPuZk3WeMIS7UoQ&s' }, // Modern campus
-        { id: 'rajarata_uni', text: 'Rajarata University', image: 'https://upload.wikimedia.org/wikipedia/en/a/a5/Rajarata_logo.png' }, // Regional campus
-        { id: 'jaffana_uni', text: 'University of Jaffna', image: 'https://upload.wikimedia.org/wikipedia/en/b/b9/UoJ_logo.png' }, // Historic campus
-        { id: 'estan_uni', text: 'Eastern University', image: 'https://upload.wikimedia.org/wikipedia/en/a/a0/EUSL_logo2.png' }, // Academic building
-        { id: 'vauniya_uni', text: 'University of Vauniya', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPUHBrGp0cQD0iVMk0c0OSJkU51oK_LthJXg&s' }, // Modern campus
-        { id: 'uva_uni', text: 'Uva Wellassa University', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsI3jfFPDzlXWWI67g_H23e6JSGd8DylS0Ug&s' }, // Scenic campus
-        { id: 'uvap_uni', text: 'University of Visual and Performing Arts', image: 'https://upload.wikimedia.org/wikipedia/en/d/dd/University_of_the_Visual_and_Performing_Arts.gif' }, // Arts-focused
-        { id: 'se_uni', text: 'South Eastern University', image: 'https://upload.wikimedia.org/wikipedia/en/6/6c/South_Eastern_University_of_Sri_Lanka_logo.png' }, // Regional campus
-        { id: 'open_uni', text: 'Open University', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHfRz0SvOM9w-MlSpQg46t07y4qzk27VDpzQ&s' }, // Online learning
-        { id: 'hnd_uni', text: 'HND', image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/SLIATE_LOGO2.png/250px-SLIATE_LOGO2.png' } // Higher education
+        { id: 'colombo_uni', text: 'University of Colombo', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0GBULN5RoVaOiewrmVLknLkR-gNo_1dEqGg&s' },
+        { id: 'peradeniya_uni', text: 'University of Peradeniya', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2XsX00Umptg_nU31mh5MeMnJaWm4S9-SDug&s' },
+        { id: 'jpura_uni', text: "University of Sri J'pura", image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStBrDhpxvFrsPg2BIH7NVfeOdnEFKriTOnIw&s' },
+        { id: 'kelaniya_uni', text: 'University of Kelaniya', image: 'https://upload.wikimedia.org/wikipedia/en/e/e0/Kelaniya.png' },
+        { id: 'moratu_uni', text: 'University of Moratuwa', image: 'https://upload.wikimedia.org/wikipedia/en/6/60/University_of_Moratuwa_logo.png' },
+        { id: 'abara_uni', text: 'Sabaragamuwa University', image: 'https://upload.wikimedia.org/wikipedia/en/5/5a/Logo-SUSL.png' },
+        { id: 'ruhuna_uni', text: 'University of Ruhuna', image: 'https://upload.wikimedia.org/wikipedia/en/2/2e/University_of_Ruhuna_logo.png' },
+        { id: 'wayaba_uni', text: 'Wayamba University', image: 'https://upload.wikimedia.org/wikipedia/en/8/8d/Wayabauniversity.png' },
+        { id: 'rajarata_uni', text: 'Rajarata University', image: 'https://upload.wikimedia.org/wikipedia/en/a/a5/Rajarata_logo.png' },
+        { id: 'jaffana_uni', text: 'University of Jaffna', image: 'https://upload.wikimedia.org/wikipedia/en/b/b9/UoJ_logo.png' },
+        { id: 'estan_uni', text: 'Eastern University', image: 'https://upload.wikimedia.org/wikipedia/en/a/a0/EUSL_logo2.png' },
+        { id: 'vauniya_uni', text: 'University of Vavuniya', image: 'https://vau.ac.lk/wp-content/uploads/2021/08/University-of-Vavuniya-Logo-1024x1024.png' },
+        { id: 'uva_uni', text: 'Uva Wellassa University', image: 'https://upload.wikimedia.org/wikipedia/commons/9/93/Logo_uwu.jpg' },
+        { id: 'uvap_uni', text: 'University of Visual and Performing Arts', image: 'https://upload.wikimedia.org/wikipedia/en/d/dd/University_of_the_Visual_and_Performing_Arts.gif' },
+        { id: 'se_uni', text: 'South Eastern University', image: 'https://upload.wikimedia.org/wikipedia/en/6/6c/South_Eastern_University_of_Sri_Lanka_logo.png' },
+        { id: 'open_uni', text: 'Open University', image: 'https://upload.wikimedia.org/wikipedia/en/8/8e/Logo_ousl.jpg' },
+        { id: 'hnd_uni', text: 'HND', image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/SLIATE_LOGO2.png/250px-SLIATE_LOGO2.png' }
+    ],
+    colombo_uni: [
+        { id: 'postgraduate_diplomas_colombo', text: 'Postgraduate Diplomas', image: 'https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=400' }
+    ],
+    postgraduate_diplomas_colombo: [
+        { id: 'pgde_colombo', text: 'Postgraduate Diploma in Education (PGDE)', image: 'https://images.pexels.com/photos/65175/pexels-photo-65175.jpeg?auto=compress&cs=tinysrgb&w=400' },
+        { id: 'pghr_colombo', text: 'Postgraduate Diploma in Human Rights', image: 'https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=400' },
+        { id: 'pgas_colombo', text: 'Postgraduate Diploma in Applied Sociology', image: 'https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=400' },
+        { id: 'pgsinhala_colombo', text: 'Postgraduate Diploma in Sinhala', image: 'https://images.pexels.com/photos/1261820/pexels-photo-1261820.jpeg?auto=compress&cs=tinysrgb&w=400' }
+    ],
+    jpura_uni: [
+        { id: 'postgraduate_diplomas_jpura', text: 'Postgraduate Diplomas', image: 'https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=400' }
+    ],
+    postgraduate_diplomas_jpura: [
+        { id: 'pgba_jpura', text: 'Postgraduate Diploma in Business Administration', image: 'https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=400' },
+        { id: 'pgccj_jpura', text: 'Postgraduate Diploma in Criminology and Criminal Justice', image: 'https://images.pexels.com/photos/1023953/pexels-photo-1023953.jpeg?auto=compress&cs=tinysrgb&w=400' },
+        { id: 'pgbs_jpura', text: 'Postgraduate Diploma in Buddhist Studies', image: 'https://images.pexels.com/photos/1261820/pexels-photo-1261820.jpeg?auto=compress&cs=tinysrgb&w=400' },
+        { id: 'pgpm_jpura', text: 'Postgraduate Diploma in Public Management', image: 'https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=400' }
+    ],
+    kelaniya_uni: [
+        { id: 'postgraduate_diplomas_kelaniya', text: 'Postgraduate Diplomas', image: 'https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=400' }
+    ],
+    postgraduate_diplomas_kelaniya: [
+        { id: 'pgmc_kelaniya', text: 'Postgraduate Diploma in Mass Communication', image: 'https://images.pexels.com/photos/97077/pexels-photo-97077.jpeg?auto=compress&cs=tinysrgb&w=400' },
+        { id: 'pgts_kelaniya', text: 'Postgraduate Diploma in Translation Studies', image: 'https://images.pexels.com/photos/3184296/pexels-photo-3184296.jpeg?auto=compress&cs=tinysrgb&w=400' },
+        { id: 'pgsll_kelaniya', text: 'Postgraduate Diploma in Sinhala Language and Literature', image: 'https://images.pexels.com/photos/1261820/pexels-photo-1261820.jpeg?auto=compress&cs=tinysrgb&w=400' },
+        { id: 'pga_kelaniya', text: 'Postgraduate Diploma in Archeology', image: 'https://images.pexels.com/photos/1261820/pexels-photo-1261820.jpeg?auto=compress&cs=tinysrgb&w=400' }
+    ],
+    peradeniya_uni: [
+        { id: 'postgraduate_diplomas_peradeniya', text: 'Postgraduate Diplomas', image: 'https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=400' }
+    ],
+    postgraduate_diplomas_peradeniya: [
+        { id: 'pgde_peradeniya', text: 'Postgraduate Diploma in Education', image: 'https://images.pexels.com/photos/65175/pexels-photo-65175.jpeg?auto=compress&cs=tinysrgb&w=400' },
+        { id: 'pgpp_peradeniya', text: 'Postgraduate Diploma in Plant Protection', image: 'https://images.pexels.com/photos/2886937/pexels-photo-2886937.jpeg?auto=compress&cs=tinysrgb&w=400' },
+        { id: 'pgcd_peradeniya', text: 'Postgraduate Diploma in Community Dentistry', image: 'https://images.pexels.com/photos/3845626/pexels-photo-3845626.jpeg?auto=compress&cs=tinysrgb&w=400' },
+        { id: 'pglis_peradeniya', text: 'Postgraduate Diploma in Library and Information Science', image: 'https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=400' }
+    ],
+    ruhuna_uni: [
+        { id: 'postgraduate_diplomas_ruhuna', text: 'Postgraduate Diplomas', image: 'https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=400' }
+    ],
+    postgraduate_diplomas_ruhuna: [
+        { id: 'pgde_ruhuna', text: 'Postgraduate Diploma in Education', image: 'https://images.pexels.com/photos/65175/pexels-photo-65175.jpeg?auto=compress&cs=tinysrgb&w=400' },
+        { id: 'pgem_ruhuna', text: 'Postgraduate Diploma in Environmental Management', image: 'https://images.pexels.com/photos/2886937/pexels-photo-2886937.jpeg?auto=compress&cs=tinysrgb&w=400' },
+        { id: 'pga_ruhuna', text: 'Postgraduate Diploma in Agriculture', image: 'https://images.pexels.com/photos/2886937/pexels-photo-2886937.jpeg?auto=compress&cs=tinysrgb&w=400' }
+    ],
+    abara_uni: [
+        { id: 'postgraduate_diplomas_abara', text: 'Postgraduate Diplomas', image: 'https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=400' }
+    ],
+    postgraduate_diplomas_abara: [
+        { id: 'pgtm_abara', text: 'Postgraduate Diploma in Tourism Management', image: 'https://images.pexels.com/photos/261102/pexels-photo-261102.jpeg?auto=compress&cs=tinysrgb&w=400' },
+        { id: 'pget_abara', text: 'Postgraduate Diploma in English Language and Teaching', image: 'https://images.pexels.com/photos/65175/pexels-photo-65175.jpeg?auto=compress&cs=tinysrgb&w=400' },
+        { id: 'pgbm_abara', text: 'Postgraduate Diploma in Business Management', image: 'https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=400' }
     ],
     faculties_su: [
-        { id: 'art_faculty', text: 'Art Faculty', image: 'https://images.pexels.com/photos/1261820/pexels-photo-1261820.jpeg?auto=compress&cs=tinysrgb&w=400' }, // Art studio
-        { id: 'management_faculty', text: 'Management Faculty', image: 'https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=400' }, // Business setting
-        { id: 'science_faculty', text: 'Science Faculty', image: 'https://images.pexels.com/photos/2280571/pexels-photo-2280571.jpeg?auto=compress&cs=tinysrgb&w=400' }, // Science lab
-        { id: 'medical_faculty', text: 'Medical Faculty', image: 'https://images.pexels.com/photos/3845625/pexels-photo-3845625.jpeg?auto=compress&cs=tinysrgb&w=400' }, // Medical setting
-        { id: 'technology_faculty', text: 'Technology Faculty', image: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=400' }, // Tech lab
-        { id: 'agriculture_faculty', text: 'Agriculture Faculty', image: 'https://images.pexels.com/photos/2886937/pexels-photo-2886937.jpeg?auto=compress&cs=tinysrgb&w=400' }, // Farming
-        { id: 'engineering_faculty', text: 'Engineering Faculty', image: 'https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=400' } // Engineering workshop
+        { id: 'art_faculty', text: 'Art Faculty', image: 'https://images.pexels.com/photos/1261820/pexels-photo-1261820.jpeg?auto=compress&cs=tinysrgb&w=400' },
+        { id: 'management_faculty', text: 'Management Faculty', image: 'https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=400' },
+        { id: 'science_faculty', text: 'Science Faculty', image: 'https://images.pexels.com/photos/2280571/pexels-photo-2280571.jpeg?auto=compress&cs=tinysrgb&w=400' },
+        { id: 'medical_faculty', text: 'Medical Faculty', image: 'https://images.pexels.com/photos/3845625/pexels-photo-3845625.jpeg?auto=compress&cs=tinysrgb&w=400' },
+        { id: 'technology_faculty', text: 'Technology Faculty', image: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=400' },
+        { id: 'agriculture_faculty', text: 'Agriculture Faculty', image: 'https://images.pexels.com/photos/2886937/pexels-photo-2886937.jpeg?auto=compress&cs=tinysrgb&w=400' },
+        { id: 'engineering_faculty', text: 'Engineering Faculty', image: 'https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=400' }
     ],
     art_faculty: [
-        { id: 'teaching_af', text: 'Teaching', image: 'https://images.pexels.com/photos/65175/pexels-photo-65175.jpeg?auto=compress&cs=tinysrgb&w=400' }, // Classroom
-        { id: 'gov_services_af', text: 'Government Services', image: 'https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=400' }, // Office setting
-        { id: 'media_com_af', text: 'Media & Communication Field', image: 'https://images.pexels.com/photos/97077/pexels-photo-97077.jpeg?auto=compress&cs=tinysrgb&w=400' }, // Media production
-        { id: 'doc_trans_af', text: 'Documentation and Translation Field', image: 'https://images.pexels.com/photos/3184296/pexels-photo-3184296.jpeg?auto=compress&cs=tinysrgb&w=400' }, // Office work
-        { id: 'cultural_af', text: 'Cultural and Creative Sector', image: 'https://images.pexels.com/photos/1261820/pexels-photo-1261820.jpeg?auto=compress&cs=tinysrgb&w=400' }, // Art performance
-        { id: 'private_af', text: 'Private Sector/NGO/INGO Jobs', image: 'https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=400' }, // Office setting
-        { id: 'business_af', text: 'Business Field', image: 'https://images.pexels.com/photos/3771089/pexels-photo-3771089.jpeg?auto=compress&cs=tinysrgb&w=400' }, // Entrepreneurship
-        { id: 'psychology_af', text: 'Psychology and Counselling Field', image: 'https://images.pexels.com/photos/4101143/pexels-photo-4101143.jpeg?auto=compress&cs=tinysrgb&w=400' } // Counseling session
+        { id: 'teaching_af', text: 'Teaching', image: 'https://images.pexels.com/photos/65175/pexels-photo-65175.jpeg?auto=compress&cs=tinysrgb&w=400' },
+        { id: 'gov_services_af', text: 'Government Services', image: 'https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=400' },
+        { id: 'media_com_af', text: 'Media & Communication Field', image: 'https://images.pexels.com/photos/97077/pexels-photo-97077.jpeg?auto=compress&cs=tinysrgb&w=400' },
+        { id: 'doc_trans_af', text: 'Documentation and Translation Field', image: 'https://images.pexels.com/photos/3184296/pexels-photo-3184296.jpeg?auto=compress&cs=tinysrgb&w=400' },
+        { id: 'cultural_af', text: 'Cultural and Creative Sector', image: 'https://images.pexels.com/photos/1261820/pexels-photo-1261820.jpeg?auto=compress&cs=tinysrgb&w=400' },
+        { id: 'private_af', text: 'Private Sector/NGO/INGO Jobs', image: 'https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=400' },
+        { id: 'business_af', text: 'Business Field', image: 'https://images.pexels.com/photos/3771089/pexels-photo-3771089.jpeg?auto=compress&cs=tinysrgb&w=400' },
+        { id: 'psychology_af', text: 'Psychology and Counselling Field', image: 'https://images.pexels.com/photos/4101143/pexels-photo-4101143.jpeg?auto=compress&cs=tinysrgb&w=400' }
     ],
     management_faculty: [
-        { id: 'hr_mf', text: 'Human Resource Development Sector', image: 'https://images.pexels.com/photos/3184431/pexels-photo-3184431.jpeg?auto=compress&cs=tinysrgb&w=400' }, // HR meeting
-        { id: 'marketing_mf', text: 'Marketing Sector', image: 'https://images.pexels.com/photos/3182746/pexels-photo-3182746.jpeg?auto=compress&cs=tinysrgb&w=400' }, // Marketing team
-        { id: 'finance_mf', text: 'Finance Sector', image: 'https://images.pexels.com/photos/3184296/pexels-photo-3184296.jpeg?auto=compress&cs=tinysrgb&w=400' }, // Financial analysis
-        { id: 'banking_mf', text: 'Banking Sector', image: 'https://images.pexels.com/photos/351264/pexels-photo-351264.jpeg?auto=compress&cs=tinysrgb&w=400' }, // Banking environment
-        { id: 'entrepreneur_mf', text: 'Entrepreneurs', image: 'https://images.pexels.com/photos/3771089/pexels-photo-3771089.jpeg?auto=compress&cs=tinysrgb&w=400' }, // Startup
-        { id: 'education_mf', text: 'Education Field', image: 'https://images.pexels.com/photos/65175/pexels-photo-65175.jpeg?auto=compress&cs=tinysrgb&w=400' } // Teaching
+        { id: 'hr_mf', text: 'Human Resource Development Sector', image: 'https://images.pexels.com/photos/3184431/pexels-photo-3184431.jpeg?auto=compress&cs=tinysrgb&w=400' },
+        { id: 'marketing_mf', text: 'Marketing Sector', image: 'https://images.pexels.com/photos/3182746/pexels-photo-3182746.jpeg?auto=compress&cs=tinysrgb&w=400' },
+        { id: 'finance_mf', text: 'Finance Sector', image: 'https://images.pexels.com/photos/3184296/pexels-photo-3184296.jpeg?auto=compress&cs=tinysrgb&w=400' },
+        { id: 'banking_mf', text: 'Banking Sector', image: 'https://images.pexels.com/photos/351264/pexels-photo-351264.jpeg?auto=compress&cs=tinysrgb&w=400' },
+        { id: 'entrepreneur_mf', text: 'Entrepreneurs', image: 'https://images.pexels.com/photos/3771089/pexels-photo-3771089.jpeg?auto=compress&cs=tinysrgb&w=400' },
+        { id: 'education_mf', text: 'Education Field', image: 'https://images.pexels.com/photos/65175/pexels-photo-65175.jpeg?auto=compress&cs=tinysrgb&w=400' }
     ],
     science_faculty: [
-        { id: 'bio_sf', text: 'Biological Science Field (Doctor, Medical Lab Scientist, Biotechnologist)', image: 'https://images.pexels.com/photos/2280571/pexels-photo-2280571.jpeg?auto=compress&cs=tinysrgb&w=400' }, // Lab work
-        { id: 'physical_sf', text: 'Physical Sciences Field (Engineer, Researcher, Mathematician)', image: 'https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=400' }, // Research lab
-        { id: 'csit_sf', text: 'Computer Science & IT (Software Engineer, Data Analyst, Cybersecurity Analyst)', image: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=400' }, // IT workspace
-        { id: 'applied_sf', text: 'Applied Sciences (Industrial/Production Specialist, Technical Consultant)', image: 'https://images.pexels.com/photos/3184296/pexels-photo-3184296.jpeg?auto=compress&cs=tinysrgb&w=400' }, // Industrial setting
-        { id: 'env_sf', text: 'Environmental & Earth Sciences (Environmental Specialist, Conservation Officers)', image: 'https://images.pexels.com/photos/2886937/pexels-photo-2886937.jpeg?auto=compress&cs=tinysrgb&w=400' } // Environmental work
+        { id: 'bio_sf', text: 'Biological Science Field (Doctor, Medical Lab Scientist, Biotechnologist)', image: 'https://images.pexels.com/photos/2280571/pexels-photo-2280571.jpeg?auto=compress&cs=tinysrgb&w=400' },
+        { id: 'physical_sf', text: 'Physical Sciences Field (Engineer, Researcher, Mathematician)', image: 'https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=400' },
+        { id: 'csit_sf', text: 'Computer Science & IT (Software Engineer, Data Analyst, Cybersecurity Analyst)', image: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=400' },
+        { id: 'applied_sf', text: 'Applied Sciences (Industrial/Production Specialist, Technical Consultant)', image: 'https://images.pexels.com/photos/3184296/pexels-photo-3184296.jpeg?auto=compress&cs=tinysrgb&w=400' },
+        { id: 'env_sf', text: 'Environmental & Earth Sciences (Environmental Specialist, Conservation Officers)', image: 'https://images.pexels.com/photos/2886937/pexels-photo-2886937.jpeg?auto=compress&cs=tinysrgb&w=400' }
     ],
     technology_faculty: [
-        { id: 'software_tf', text: 'Software Developer', image: 'https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&w=400' }, // Coding
-        { id: 'asst_software_tf', text: 'Assistant Software Engineer', image: 'https://images.pexels.com/photos/1181676/pexels-photo-1181676.jpeg?auto=compress&cs=tinysrgb&w=400' }, // Tech workspace
-        { id: 'elec_design_tf', text: 'Electronic Designing Engineer', image: 'https://images.pexels.com/photos/3184293/pexels-photo-3184293.jpeg?auto=compress&cs=tinysrgb&w=400' }, // Electronics lab
-        { id: 'electrical_tf', text: 'Electrical Engineer', image: 'https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=400' }, // Electrical work
-        { id: 'mechanical_tf', text: 'Mechanical Engineer', image: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=400' } // Mechanical workshop
+        { id: 'software_tf', text: 'Software Developer', image: 'https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&w=400' },
+        { id: 'asst_software_tf', text: 'Assistant Software Engineer', image: 'https://images.pexels.com/photos/1181676/pexels-photo-1181676.jpeg?auto=compress&cs=tinysrgb&w=400' },
+        { id: 'elec_design_tf', text: 'Electronic Designing Engineer', image: 'https://images.pexels.com/photos/3184293/pexels-photo-3184293.jpeg?auto=compress&cs=tinysrgb&w=400' },
+        { id: 'electrical_tf', text: 'Electrical Engineer', image: 'https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=400' },
+        { id: 'mechanical_tf', text: 'Mechanical Engineer', image: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=400' }
     ],
     agriculture_faculty: [
-        { id: 'agri_officer_af', text: 'Agricultural Officer', image: 'https://images.pexels.com/photos/2886937/pexels-photo-2886937.jpeg?auto=compress&cs=tinysrgb&w=400' }, // Farming
-        { id: 'dev_officer_af', text: 'Development Officer (DO)', image: 'https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=400' }, // Office setting
-        { id: 'vet_officer_af', text: 'Veterinary Officer (if specialized in animal sciences)', image: 'https://images.pexels.com/photos/4164773/pexels-photo-4164773.jpeg?auto=compress&cs=tinysrgb&w=400' }, // Veterinary work
-        { id: 'env_officer_af', text: 'Environmental Officer', image: 'https://images.pexels.com/photos/2886937/pexels-photo-2886937.jpeg?auto=compress&cs=tinysrgb&w=400' }, // Environmental work
-        { id: 'lecturer_af', text: 'University Lecturer / Academic Researcher', image: 'https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=400' }, // Academic setting
-        { id: 'food_tech_af', text: 'Food Technologist', image: 'https://images.pexels.com/photos/2280571/pexels-photo-2280571.jpeg?auto=compress&cs=tinysrgb&w=400' }, // Food lab
-        { id: 'agribusiness_af', text: 'Agribusiness Manager', image: 'https://images.pexels.com/photos/3771089/pexels-photo-3771089.jpeg?auto=compress&cs=tinysrgb&w=400' } // Business setting
+        { id: 'agri_officer_af', text: 'Agricultural Officer', image: 'https://images.pexels.com/photos/2886937/pexels-photo-2886937.jpeg?auto=compress&cs=tinysrgb&w=400' },
+        { id: 'dev_officer_af', text: 'Development Officer (DO)', image: 'https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=400' },
+        { id: 'vet_officer_af', text: 'Veterinary Officer (if specialized in animal sciences)', image: 'https://images.pexels.com/photos/4164773/pexels-photo-4164773.jpeg?auto=compress&cs=tinysrgb&w=400' },
+        { id: 'env_officer_af', text: 'Environmental Officer', image: 'https://images.pexels.com/photos/2886937/pexels-photo-2886937.jpeg?auto=compress&cs=tinysrgb&w=400' },
+        { id: 'lecturer_af', text: 'University Lecturer / Academic Researcher', image: 'https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=400' },
+        { id: 'food_tech_af', text: 'Food Technologist', image: 'https://images.pexels.com/photos/2280571/pexels-photo-2280571.jpeg?auto=compress&cs=tinysrgb&w=400' },
+        { id: 'agribusiness_af', text: 'Agribusiness Manager', image: 'https://images.pexels.com/photos/3771089/pexels-photo-3771089.jpeg?auto=compress&cs=tinysrgb&w=400' }
     ],
     medical_faculty: [
-        { id: 'clinician_mf', text: 'Clinical Practitioner (Medical Officer, General Practitioner)', image: 'https://images.pexels.com/photos/3845625/pexels-photo-3845625.jpeg?auto=compress&cs=tinysrgb&w=400' }, // Medical practice
-        { id: 'dentist_mf', text: 'Dentist', image: 'https://images.pexels.com/photos/3845626/pexels-photo-3845626.jpeg?auto=compress&cs=tinysrgb&w=400' }, // Dental practice
-        { id: 'vet_surgeon_mf', text: 'Veterinary Surgeon', image: 'https://images.pexels.com/photos/4164773/pexels-photo-4164773.jpeg?auto=compress&cs=tinysrgb&w=400' }, // Veterinary work
-        { id: 'lecturer_mf', text: 'University Lecturer', image: 'https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=400' }, // Academic setting
-        { id: 'researcher_mf', text: 'Medical Researcher', image: 'https://images.pexels.com/photos/2280571/pexels-photo-2280571.jpeg?auto=compress&cs=tinysrgb&w=400' }, // Research lab
-        { id: 'admin_mf', text: 'Medical Administrator', image: 'https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=400' } // Office setting
+        { id: 'clinician_mf', text: 'Clinical Practitioner (Medical Officer, General Practitioner)', image: 'https://images.pexels.com/photos/3845625/pexels-photo-3845625.jpeg?auto=compress&cs=tinysrgb&w=400' },
+        { id: 'dentist_mf', text: 'Dentist', image: 'https://images.pexels.com/photos/3845626/pexels-photo-3845626.jpeg?auto=compress&cs=tinysrgb&w=400' },
+        { id: 'vet_surgeon_mf', text: 'Veterinary Surgeon', image: 'https://images.pexels.com/photos/4164773/pexels-photo-4164773.jpeg?auto=compress&cs=tinysrgb&w=400' },
+        { id: 'lecturer_mf', text: 'University Lecturer', image: 'https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=400' },
+        { id: 'researcher_mf', text: 'Medical Researcher', image: 'https://images.pexels.com/photos/2280571/pexels-photo-2280571.jpeg?auto=compress&cs=tinysrgb&w=400' },
+        { id: 'admin_mf', text: 'Medical Administrator', image: 'https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=400' }
     ],
     engineering_faculty: [
-        { id: 'elec_eng_ef', text: 'Electrical Engineer', image: 'https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=400' }, // Electrical work
-        { id: 'civil_eng_ef', text: 'Civil Engineer', image: 'https://images.pexels.com/photos/3184293/pexels-photo-3184293.jpeg?auto=compress&cs=tinysrgb&w=400' }, // Construction site
-        { id: 'software_eng_ef', text: 'Software Engineer', image: 'https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&w=400' }, // Coding
-        { id: 'mech_eng_ef', text: 'Mechanical Engineer', image: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=400' }, // Mechanical workshop
-        { id: 'marine_eng_ef', text: 'Marine Engineer', image: 'https://images.pexels.com/photos/1007427/pexels-photo-1007427.jpeg?auto=compress&cs=tinysrgb&w=400' } // Maritime setting
+        { id: 'elec_eng_ef', text: 'Electrical Engineer', image: 'https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=400' },
+        { id: 'civil_eng_ef', text: 'Civil Engineer', image: 'https://images.pexels.com/photos/3184293/pexels-photo-3184293.jpeg?auto=compress&cs=tinysrgb&w=400' },
+        { id: 'software_eng_ef', text: 'Software Engineer', image: 'https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&w=400' },
+        { id: 'mech_eng_ef', text: 'Mechanical Engineer', image: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=400' },
+        { id: 'marine_eng_ef', text: 'Marine Engineer', image: 'https://images.pexels.com/photos/1007427/pexels-photo-1007427.jpeg?auto=compress&cs=tinysrgb&w=400' }
     ],
-    // Leaf nodes (no changes needed as they are empty arrays)
-    'vta_ol': [], 'technical_college_ol': [], 'jerman_tech_ol': [], 'korean_tech_ol': [], 'naita_ol': [], 'hotel_school_ol': [],
-    'vta_olf': [], 'technical_college_olf': [], 'jerman_tech_olf': [], 'korean_tech_olf': [], 'naita_olf': [], 'hotel_school_olf': [],
-    'retry_al_failed': [], 'abroad_al_failed': [], 'private_uni_foundation_al_failed': [],
-    'vta_alf': [], 'technical_college_alf': [],
-    'nsbm_uni': [], 'nibm_uni': [], 'cinec_uni': [], 'sliit_uni': [],
-    'job_abroad_al_passed': [],
-    'hnd_alp': [], 'kdu_alp': [], 'open_uni_alp': [], 'law_alp': [], 'ocean_alp': [],
-    'prof_qual_no_uni': [], 'abroad_no_uni': [], 'business_no_uni': [], 'teaching_college_no_uni': [],
-    'hnd_nu': [], 'kdu_nu': [], 'open_uni_nu': [], 'law_co_nu': [], 'ocean_nu': [],
-    'colombo_uni': [], 'peradeniya_uni': [], 'jpura_uni': [], 'kelaniya_uni': [],
-    'moratu_uni': [], 'abara_uni': [], 'ruhuna_uni': [], 'wayaba_uni': [], 'rajarata_uni': [],
-    'jaffana_uni': [], 'estan_uni': [], 'vauniya_uni': [], 'uva_uni': [], 'uvap_uni': [], 'se_uni': [], 'open_uni': [], 'hnd_uni': []
+    vta_ol: [], technical_college_ol: [], jerman_tech_ol: [], korean_tech_ol: [], naita_ol: [], hotel_school_ol: [],
+    vta_olf: [], technical_college_olf: [], jerman_tech_olf: [], korean_tech_olf: [], naita_olf: [], hotel_school_olf: [],
+    retry_al_failed: [], abroad_al_failed: [], private_uni_foundation_al_failed: [],
+    vta_alf: [], technical_college_alf: [],
+    nsbm_uni: [], nibm_uni: [], cinec_uni: [], sliit_uni: [],
+    job_abroad_al_passed: [],
+    hnd_alp: [], kdu_alp: [], open_uni_alp: [], law_alp: [], ocean_alp: [],
+    prof_qual_no_uni: [], abroad_no_uni: [], business_no_uni: [], teaching_college_no_uni: [],
+    hnd_nu: [], kdu_nu: [], open_uni_nu: [], law_co_nu: [], ocean_nu: [],
+    moratu_uni: [], wayaba_uni: [], rajarata_uni: [],
+    jaffana_uni: [], estan_uni: [], vauniya_uni: [], uva_uni: [], uvap_uni: [], se_uni: [], open_uni: [], hnd_uni: [],
+    pgde_colombo: [], pghr_colombo: [], pgas_colombo: [], pgsinhala_colombo: [],
+    pgba_jpura: [], pgccj_jpura: [], pgbs_jpura: [], pgpm_jpura: [],
+    pgmc_kelaniya: [], pgts_kelaniya: [], pgsll_kelaniya: [], pga_kelaniya: [],
+    pgde_peradeniya: [], pgpp_peradeniya: [], pgcd_peradeniya: [], pglis_peradeniya: [],
+    pgde_ruhuna: [], pgem_ruhuna: [], pga_ruhuna: [],
+    pgtm_abara: [], pget_abara: [], pgbm_abara: []
 };
 
 const allNodesById = {};
@@ -309,7 +374,7 @@ function render(path) {
             childrenWrapper.appendChild(div);
         });
         
-        if(parentDiv) {
+        if (parentDiv) {
             setTimeout(() => parentDiv.classList.add('visible'), 0);
         }
 
