@@ -3,6 +3,12 @@
 ## Project Overview
 The **Educational Pathway Mind Map** is an interactive web application developed for the Uva Wellassa University Career Guidance Unit to assist students in exploring educational and career pathways after completing their Ordinary Level (O/L), Advanced Level (A/L), or university-level education. The application visualizes potential academic and vocational options in a dynamic, user-friendly mind map format, allowing users to navigate through various educational and professional routes with ease.
 
+## Images
+<img width="1868" height="890" alt="start" src="https://github.com/user-attachments/assets/ae9941e4-cd12-4d2f-89ef-7855bb9bf292" />
+<img width="607" height="855" alt="unilist" src="https://github.com/user-attachments/assets/a5f90b11-f3d6-4a3e-993f-2ab3e464bc41" />
+<img width="1417" height="892" alt="al" src="https://github.com/user-attachments/assets/5ea2b921-386f-4fa8-9086-dc792581ca70" />
+
+
 ## Purpose
 This project aims to provide a clear and engaging tool for students to:
 - Understand available educational and career options based on their academic achievements (O/L, A/L, or university level).
