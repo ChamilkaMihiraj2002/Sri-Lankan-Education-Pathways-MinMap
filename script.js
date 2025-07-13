@@ -18,7 +18,7 @@ const data = {
     vta_tech_etc_ol: [
         { id: 'vta_ol', text: 'VTA', image: 'https://images.pexels.com/photos/5905709/pexels-photo-5905709.jpeg?auto=compress&cs=tinysrgb&w=400' },
         { id: 'technical_college_ol', text: 'Technical College', image: 'https://images.pexels.com/photos/5212338/pexels-photo-5212338.jpeg?auto=compress&cs=tinysrgb&w=400' },
-        { id: 'jerman_tech_ol', text: 'German Tech', image: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=400' },
+        { id: 'jerman_tech_ol', text: 'German Tech', image: 'https://upload.wikimedia.org/wikipedia/commons/b/b4/Cgtti_logo.jpg' },
         { id: 'korean_tech_ol', text: 'Korean Tech', image: 'https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=400' },
         { id: 'naita_ol', text: 'NAITA', image: 'https://images.pexels.com/photos/3184296/pexels-photo-3184296.jpeg?auto=compress&cs=tinysrgb&w=400' },
         { id: 'hotel_school_ol', text: 'Hotel School', image: 'https://images.pexels.com/photos/261102/pexels-photo-261102.jpeg?auto=compress&cs=tinysrgb&w=400' }
@@ -26,7 +26,7 @@ const data = {
     vta_tech_etc_ol_failed: [
         { id: 'vta_olf', text: 'VTA', image: 'https://images.pexels.com/photos/5905700/pexels-photo-5905700.jpeg?auto=compress&cs=tinysrgb&w=400' },
         { id: 'technical_college_olf', text: 'Technical College', image: 'https://images.pexels.com/photos/5212339/pexels-photo-5212339.jpeg?auto=compress&cs=tinysrgb&w=400' },
-        { id: 'jerman_tech_olf', text: 'German Tech', image: 'https://images.pexels.com/photos/3184293>auto=compress&cs=tinysrgb&w=400' },
+        { id: 'jerman_tech_olf', text: 'German Tech', image: 'https://upload.wikimedia.org/wikipedia/commons/b/b4/Cgtti_logo.jpg' },
         { id: 'korean_tech_olf', text: 'Korean Tech', image: 'https://images.pexels.com/photos/3184294/pexels-photo-3184294.jpeg?auto=compress&cs=tinysrgb&w=400' },
         { id: 'naita_olf', text: 'NAITA', image: 'https://images.pexels.com/photos/3184297/pexels-photo-3184297.jpeg?auto=compress&cs=tinysrgb&w=400' },
         { id: 'hotel_school_olf', text: 'Hotel School', image: 'https://images.pexels.com/photos/261101/pexels-photo-261101.jpeg?auto=compress&cs=tinysrgb&w=400' }
