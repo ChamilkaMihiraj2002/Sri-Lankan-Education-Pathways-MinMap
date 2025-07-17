@@ -1,8 +1,11 @@
+// Faculties for state universities must be inside the main data object
+    
 const data = {
     start: [
         { id: 'ol', text: 'O/L', image: 'https://images.pexels.com/photos/1591061/pexels-photo-1591061.jpeg?auto=compress&cs=tinysrgb&w=400' },
         { id: 'al', text: 'A/L', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcl1v1fU74GIfNWzAGYuNdItJs3bc4TbM9hQ&s' },
-        { id: 'university', text: 'University', image: 'https://images.pexels.com/photos/207684/pexels-photo-207684.jpeg?auto=compress&cs=tinysrgb&w=400' }
+        { id: 'bachelors', text: "Bachelor's", image: 'https://images.pexels.com/photos/207684/pexels-photo-207684.jpeg?auto=compress&cs=tinysrgb&w=400' },
+        { id: 'postgraduates', text: 'Postgraduates', image: 'https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=400' }
     ],
     ol: [
         { id: 'ol_passed', text: 'O/L Passed', image: 'https://images.pexels.com/photos/1591061/pexels-photo-1591061.jpeg?auto=compress&cs=tinysrgb&w=400' },
@@ -48,15 +51,418 @@ const data = {
         { id: 'private_uni_foundation_al_failed', text: 'Private Uni (Foundation)', image: 'https://images.pexels.com/photos/267885/pexels-photo-267885.jpeg?auto=compress&cs=tinysrgb&w=400' },
         { id: 'vta_tech_etc_al_failed', text: 'Vocational Training', image: 'https://images.pexels.com/photos/3992870/pexels-photo-3992870.jpeg?auto=compress&cs=tinysrgb&w=400' }
     ],
-    university: [
-        { id: 'state_uni', text: 'State Universities', image: 'https://images.pexels.com/photos/207684/pexels-photo-207684.jpeg?auto=compress&cs=tinysrgb&w=400' },
-        { id: 'private_uni', text: 'Private Universities', image: 'https://images.pexels.com/photos/247819/pexels-photo-247819.jpeg?auto=compress&cs=tinysrgb&w=400' }
+    bachelors: [
+        { id: 'state_unis_bach', text: 'State Universities', image: 'https://images.pexels.com/photos/207684/pexels-photo-207684.jpeg?auto=compress&cs=tinysrgb&w=400' },
+        { id: 'private_unis_bach', text: 'Private Universities', image: 'https://images.pexels.com/photos/247819/pexels-photo-247819.jpeg?auto=compress&cs=tinysrgb&w=400' },
+        { id: 'faculties_bach', text: 'Faculties', image: 'https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=400' }
     ],
-    private_uni: [
-        { id: 'nsbm_uni', text: 'NSBM University', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfVnx3iBftwmBBX1C7Qo2BHq90dgix7M4n2Q&s' },
-        { id: 'nibm_uni', text: 'NIBM University', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3AhyEATU3RYtWWPWFk3knpoDaOO5LiGohEg&s' },
-        { id: 'cinec_uni', text: 'CINEC Campus', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfwfIgwQDaSd-lHzE7Oa3IktFWq__D1Tui6Q&s' },
-        { id: 'sliit_uni', text: 'SLIIT', image: 'https://upload.wikimedia.org/wikipedia/en/a/a6/SLIIT_Logo_Crest.png' }
+    postgraduates: [
+        { id: 'pgdiplomas', text: 'Postgraduate Diplomas', image: 'https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=400' },
+        { id: 'masters', text: "Master's (M.Sc)", image: 'https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=400' },
+        { id: 'phd', text: 'PhD', image: 'https://images.pexels.com/photos/1261820/pexels-photo-1261820.jpeg?auto=compress&cs=tinysrgb&w=400' }
+    ],
+    state_unis_bach: [
+        { id: 'uva_uni_bach', text: 'Uva Wellassa University', image: 'https://upload.wikimedia.org/wikipedia/commons/9/93/Logo_uwu.jpg' },
+        { id: 'colombo_uni_bach', text: 'University of Colombo', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0GBULN5RoVaOiewrmVLknLkR-gNo_1dEqGg&s' },
+        { id: 'peradeniya_uni_bach', text: 'University of Peradeniya', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2XsX00Umptg_nU31mh5MeMnJaWm4S9-SDug&s' },
+        { id: 'jpura_uni_bach', text: "University of Sri J'pura", image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStBrDhpxvFrsPg2BIH7NVfeOdnEFKriTOnIw&s' },
+        { id: 'kelaniya_uni_bach', text: 'University of Kelaniya', image: 'https://upload.wikimedia.org/wikipedia/en/e/e0/Kelaniya.png' },
+        { id: 'moratu_uni_bach', text: 'University of Moratuwa', image: 'https://upload.wikimedia.org/wikipedia/en/6/60/University_of_Moratuwa_logo.png' },
+        { id: 'abara_uni_bach', text: 'Sabaragamuwa University', image: 'https://upload.wikimedia.org/wikipedia/en/5/5a/Logo-SUSL.png' },
+        { id: 'ruhuna_uni_bach', text: 'University of Ruhuna', image: 'https://upload.wikimedia.org/wikipedia/en/2/2e/University_of_Ruhuna_logo.png' },
+        { id: 'wayaba_uni_bach', text: 'Wayamba University of Sri Lanka', image: 'https://upload.wikimedia.org/wikipedia/en/8/8d/Wayabauniversity.png' },
+        { id: 'rajarata_uni_bach', text: 'Rajarata University of Sri Lanka', image: 'https://upload.wikimedia.org/wikipedia/en/a/a5/Rajarata_logo.png' },
+        { id: 'jaffana_uni_bach', text: 'University of Jaffna', image: 'https://upload.wikimedia.org/wikipedia/en/b/b9/UoJ_logo.png' },
+        { id: 'estan_uni_bach', text: 'Eastern University, Sri Lanka', image: 'https://upload.wikimedia.org/wikipedia/en/a/a0/EUSL_logo2.png' },
+        { id: 'vauniya_uni_bach', text: 'University of Vavuniya', image: 'https://vau.ac.lk/wp-content/uploads/2021/08/University-of-Vavuniya-Logo-1024x1024.png' },
+        { id: 'uvap_uni_bach', text: 'University of Visual and Performing Arts', image: 'https://upload.wikimedia.org/wikipedia/en/d/dd/University_of_the_Visual_and_Performing_Arts.gif' },
+        { id: 'se_uni_bach', text: 'South Eastern University of Sri Lanka', image: 'https://upload.wikimedia.org/wikipedia/en/6/6c/South_Eastern_University_of_Sri_Lanka_logo.png' },
+        { id: 'open_uni_bach', text: 'Open University of Sri Lanka', image: 'https://upload.wikimedia.org/wikipedia/en/8/8e/Logo_ousl.jpg' },
+        { id: 'gampaha_uni_bach', text: 'Gampaha Wickramarachchi University of Indigenous Medicine', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHANCAGR15nCWCvhxGwv8iXxA8FYZWgSx1Pw&s' }
+    ],
+    private_unis_bach: [
+        { id: 'nibm_bach', text: 'NIBM', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3AhyEATU3RYtWWPWFk3knpoDaOO5LiGohEg&s' },
+        { id: 'nsbm_bach', text: 'NSBM', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfVnx3iBftwmBBX1C7Qo2BHq90dgix7M4n2Q&s' },
+        { id: 'sliit_bach', text: 'SLIIT', image: 'https://upload.wikimedia.org/wikipedia/en/a/a6/SLIIT_Logo_Crest.png' },
+        { id: 'cinec_bach', text: 'CINEC', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfwfIgwQDaSd-lHzE7Oa3IktFWq__D1Tui6Q&s' },
+        { id: 'iit_bach', text: 'IIT', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfFrfJAr4sBC3xhDmce_Njr9e-9fnQy5KP0Q&s' },
+        { id: 'royal_bach', text: 'Royal Institute of Colombo', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXGUuJg8r6ExssbrIMe-SAyaD3Y45cszVyNw&s' },
+        { id: 'horizon_bach', text: 'Horizon Campus', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRO5sI90EFIw7BVsi4SVlIWpIpVyE-WgaylhQ&s' },
+        { id: 'sltc_bach', text: 'SLTC Research University', image: 'https://upload.wikimedia.org/wikipedia/commons/9/99/SLTC_Research_University_Logo.png' },
+        { id: 'kiu_bach', text: 'KIU', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVLOqR9oQD0hJ7pikYWtrAKupBxcQpq1JbVg&s' },
+        { id: 'icbt_bach', text: 'ICBT', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGG2D4unG1NLsGJCTth25T_3Y4DvIzVye8qg&s' }
+    ],
+    // Private university degree programs (example)
+    nibm_bach: [
+        { id: 'nibm_bsc', text: 'BSc in Management', image: '' },
+        { id: 'nibm_ba', text: 'BA in English', image: '' }
+    ],
+    nsbm_bach: [
+        { id: 'nsbm_bsc', text: 'BSc in Computer Science', image: '' },
+        { id: 'nsbm_ba', text: 'BA in Business Communication', image: '' }
+    ],
+    sliit_bach: [
+        { id: 'sliit_bsc', text: 'BSc in IT', image: '' },
+        { id: 'sliit_beng', text: 'BEng in Software Engineering', image: '' }
+    ],
+    cinec_bach: [
+        { id: 'cinec_bsc', text: 'BSc in Logistics', image: '' },
+        { id: 'cinec_ba', text: 'BA in International Relations', image: '' }
+    ],
+    // ...repeat for other private universities as needed...
+    // State university degree programs (examples, add more as needed)
+    colombo_uni_bach: [
+        { id: 'colombo_llb', text: 'Bachelor of Laws', image: '' },
+        { id: 'colombo_mbbs', text: 'Bachelor of Medicine', image: '' },
+        { id: 'colombo_bsc', text: 'Bachelor of Science', image: '' },
+        { id: 'colombo_ba', text: 'Bachelor of Arts', image: '' },
+        { id: 'colombo_bcom', text: 'Bachelor of Commerce', image: '' }
+    ],
+    jpura_uni_bach: [
+        { id: 'jpura_bcom', text: 'B.Com. (Special) Degree Programme (04 years)', image: '' },
+        { id: 'jpura_bsc_marketing', text: 'B.Sc Marketing Management (Special) Degree Programme (04 years)', image: '' },
+        { id: 'jpura_bsc_accounting', text: 'B.Sc Accounting (Special) Degree Programme', image: '' },
+        { id: 'jpura_bsc_hr', text: 'B.Sc Human Resource Management (Special) Degree Programme (04 years)', image: '' },
+        { id: 'jpura_bsc_finance', text: 'B.Sc Finance (Special) Degree Programme (04 years)', image: '' },
+        { id: 'jpura_bsc_public_mgmt', text: 'B.Sc Public Management (special) Degree Programme (04 years)', image: '' },
+        { id: 'jpura_bsc_entrepreneur', text: 'B.Sc Entrepreneurship (special) Degree Programme (04 years)', image: '' },
+        { id: 'jpura_bsc_bis', text: 'B.Sc Business Information systems (special) Degree Programme(04 years)', image: '' },
+        { id: 'jpura_bsc_ba_economics', text: 'B.Sc Business Administration Degree Programme – (Business Economics) (Special) Degree Programme (04 years)', image: '' },
+        { id: 'jpura_bsc_ba', text: 'B.Sc Business Administration (Special) Degree Programme', image: '' }
+    ],
+    kelaniya_uni_bach: [
+        { id: 'kelaniya_ba_special', text: 'Bachelor of Arts (Special) Degree programs in areas like English, Sinhala, or History', image: '' },
+        { id: 'kelaniya_ba_lib_info', text: 'Bachelor of Arts in Library and Information Science (General) External', image: '' },
+        { id: 'kelaniya_ba_hindi', text: 'Bachelor of Arts Honours Degree in Hindi Studies', image: '' },
+        { id: 'kelaniya_bsc_honours', text: 'Bachelor of Science Honours Degree programs in various fields', image: '' },
+        { id: 'kelaniya_bsc_mgmt_it', text: 'Bachelor of Science Honours in Management and Information Technology', image: '' },
+        { id: 'kelaniya_bsc_math_physics', text: 'Bachelor of Science Honours in Mathematical Physics', image: '' },
+        { id: 'kelaniya_biosys_tech', text: 'Bachelor of Biosystems Technology Honours', image: '' },
+        { id: 'kelaniya_eng_tech', text: 'Bachelor of Engineering Technology Honours', image: '' }
+    ],
+    peradeniya_uni_bach: [
+        { id: 'peradeniya_ba_economics', text: 'Bachelor of Arts (BA) degrees, including Honours programs, in Economics, English, Geography, History, Sinhala', image: '' },
+        { id: 'peradeniya_bsc_biology', text: 'Bachelor of Science (BSc) and BSc Honours degrees in Biology, Botany, Chemistry, Computer Science, Geology, Mathematics, Molecular Biology & Biotechnology, and Physics.', image: '' },
+        { id: 'peradeniya_bsc_med_lab', text: 'B.Sc. degrees in Medical Laboratory Science, Nursing, Pharmacy, Physiotherapy, and Radiography/Radiotherapy.', image: '' }
+    ],
+    moratu_uni_bach: [
+        { id: 'moratuwa_barch', text: 'Bachelor of Architecture Honours', image: '' },
+        { id: 'moratuwa_bland_arch', text: 'Bachelor of Landscape Architecture Honours', image: '' },
+        { id: 'moratuwa_bdesign', text: 'Bachelor of Design Honours', image: '' },
+        { id: 'moratuwa_bsc_town', text: 'Bachelor of Science Honours in Town & Country Planning', image: '' },
+        { id: 'moratuwa_bsc_quantity', text: 'Bachelor of Science Honours in Quantity Surveying', image: '' },
+        { id: 'moratuwa_bsc_facilities', text: 'Bachelor of Science Honours in Facilities Management', image: '' }
+    ],
+    uva_uni_bach: [
+        { id: 'uva_bba_hrd', text: 'Bachelor of BUSINESS MANAGEMENT (Honours) in HRD', image: '' },
+        { id: 'uva_bba_hte', text: 'Bachelor of BUSINESS MANAGEMENT(Honours) in HTE', image: '' },
+        { id: 'uva_bba_enm', text: 'Bachelor of BUSINESS MANAGEMENT (Honours) in ENM', image: '' },
+        { id: 'uva_bsc_applied_math', text: 'Bachelor of Science (BSc) in Applied Mathematics and Computing', image: '' },
+        { id: 'uva_bsc_cs', text: 'Bachelor of Science Honours in Computer Science', image: '' },
+        { id: 'uva_bsc_ind_info_tech', text: 'Bachelor of Industrial Information Technology', image: '' }
+    ],
+    abara_uni_bach: [
+        { id: 'saba_bsc_food', text: 'Bachelor of Science (Honours) in Food Science and Technology', image: '' },
+        { id: 'saba_bsc_env', text: 'Environmental Sciences', image: '' },
+        { id: 'saba_bsc_natural', text: 'Natural Resource Management', image: '' },
+        { id: 'saba_bsc_applied_physics', text: 'Applied Physics', image: '' },
+        { id: 'saba_bsc_chem_tech', text: 'Chemical Technology', image: '' },
+        { id: 'saba_bsc_cs_tech', text: 'Computer Science and Technology', image: '' },
+        { id: 'saba_bsc_pe', text: 'Physical Education', image: '' },
+        { id: 'saba_bsc_sport', text: 'Sport Sciences and Management', image: '' }
+    ],
+    ruhuna_uni_bach: [
+        { id: 'ruhuna_bsc_eng_civil', text: 'Bachelor of Science in Engineering (B.Sc.Eng.) degrees in Civil and Environmental Engineering', image: '' },
+        { id: 'ruhuna_bsc_eng_electrical', text: 'Electrical and Information Engineering', image: '' },
+        { id: 'ruhuna_bsc_eng_marine', text: 'Marine Engineering and Naval Architecture', image: '' },
+        { id: 'ruhuna_bsc_eng_mechanical', text: 'Mechanical and Manufacturing Engineering', image: '' },
+        { id: 'ruhuna_bba_accounting', text: 'Bachelor of Business Administration (BBA) degrees with specializations in Accounting', image: '' },
+        { id: 'ruhuna_bba_entrepreneur', text: 'Entrepreneurship', image: '' },
+        { id: 'ruhuna_bba_hr', text: 'Human Resources Management', image: '' },
+        { id: 'ruhuna_bba_marketing', text: 'Marketing', image: '' },
+        { id: 'ruhuna_bsc_agriculture', text: 'Bachelor of Science in Agriculture', image: '' }
+    ],
+    wayaba_uni_bach: [
+        { id: 'wayamba_bsc_agri', text: 'Bachelor of Science (Agriculture) Honours', image: '' },
+        { id: 'wayamba_biosys_tech', text: 'Bachelor of Biosystems Technology Honours', image: '' },
+        { id: 'wayamba_bsc_plant', text: 'Bachelor of Science (Plantation Management)', image: '' },
+        { id: 'wayamba_maetm', text: 'Master of Agri-Enterprise & Technology Management (M.AETM)', image: '' },
+        { id: 'wayamba_ext_agri', text: 'External Degree in Agriculture and Plantation Management', image: '' }
+    ],
+    rajarata_uni_bach: [
+        { id: 'rajarata_bsc_agri', text: 'B.Sc. (Hons) in Agriculture', image: '' },
+        { id: 'rajarata_bsc_applied', text: 'B.Sc. (General) in Applied Sciences', image: '' },
+        { id: 'rajarata_bsc_hons_applied', text: 'B.Sc. (Hons) in Applied Sciences', image: '' },
+        { id: 'rajarata_bsc_ind_math', text: 'B.Sc. (Hons) in Industrial Mathematics', image: '' },
+        { id: 'rajarata_bsc_applied_bio', text: 'B.Sc. (Special) in Applied Biology', image: '' },
+        { id: 'rajarata_bsc_chem', text: 'B.Sc. (Hons) in Chemistry', image: '' },
+        { id: 'rajarata_bsc_it', text: 'B.Sc. (General) in Information Technology', image: '' },
+        { id: 'rajarata_bsc_hons_it', text: 'B.Sc. (Hons) in Information Technology', image: '' },
+        { id: 'rajarata_bsc_health_promo', text: 'B.Sc. (General) in Health Promotion', image: '' },
+        { id: 'rajarata_bsc_hons_health_promo', text: 'B.Sc. (Hons) in Health Promotion.', image: '' },
+        { id: 'rajarata_bsc_joint_bio_phys', text: 'B.Sc. (Joint Major) in Biology & Physics', image: '' },
+        { id: 'rajarata_bsc_joint_chem_phys', text: 'B.Sc. (Joint Major) in Chemistry & Physics', image: '' }
+    ],
+    jaffana_uni_bach: [
+        { id: 'jaffna_ba', text: 'Bachelor of Arts (BA) degree with specializations in Anthropology, Archaeology, Economics, English, Geography, History, Linguistics, and more.', image: '' },
+        { id: 'jaffna_bcom', text: 'Bachelor of Commerce (B.Com)', image: '' },
+        { id: 'jaffna_bba', text: 'Bachelor of Business Administration (BBA)', image: '' },
+        { id: 'jaffna_bsc', text: 'Bachelor of Science (BSc) degree, including a BSc (General) and specialized degrees like BSc (Nursing) and BSc in Medical Laboratory Science.', image: '' },
+        { id: 'jaffna_bed', text: 'Bachelor of Education (B.Ed) degree.', image: '' }
+    ],
+    estan_uni_bach: [
+        { id: 'eastern_ba_gen', text: 'Bachelor of Arts (General)', image: '' },
+        { id: 'eastern_bed', text: 'Bachelor of Education', image: '' },
+        { id: 'eastern_ba_special', text: 'Various special degrees in Arts, including Tamil, Fine Arts, Philosophy, Geography, Hindu Culture, Political Science, Sociology, Education, Economics, and Drama & Theatre.', image: '' },
+        { id: 'eastern_bba', text: 'Bachelor of Business Administration (BBA) (Honours)', image: '' },
+        { id: 'eastern_bcom', text: 'Bachelor of Commerce (BCom) (Honours)', image: '' },
+        { id: 'eastern_bio_chem_cs_math_phys', text: 'Programs in Biological Sciences, Chemical Sciences, Computer Science, Mathematical Sciences, and Physical Sciences.', image: '' }
+    ],
+    vauniya_uni_bach: [
+        { id: 'vavuniya_bsc_applied_math', text: 'Bachelor of Science in Applied Mathematics and Computing', image: '' },
+        { id: 'vavuniya_bsc_cs', text: 'Bachelor of Science Honours in Computer Science', image: '' },
+        { id: 'vavuniya_bsc_env', text: 'Bachelor of Science Honours in Environmental Science', image: '' },
+        { id: 'vavuniya_bsc_it', text: 'Bachelor of Science in Information Technology', image: '' },
+        { id: 'vavuniya_bsc_hons_it', text: 'Bachelor of Science Honours in Information Technology', image: '' },
+        { id: 'vavuniya_bsc_acc_fin', text: 'Bachelor of Science Honours in Accounting and Finance', image: '' },
+        { id: 'vavuniya_bsc_proj_mgmt', text: 'Bachelor of Science Honours in Project Management', image: '' },
+        { id: 'vavuniya_bsc_bank_ins', text: 'Bachelor of Science Honours in Banking and Insurance', image: '' },
+        { id: 'vavuniya_bsc_hr', text: 'Bachelor of Science Honours in Human Resource Management', image: '' },
+        { id: 'vavuniya_bsc_biz_econ', text: 'Bachelor of Science Honours in Business Economics', image: '' },
+        { id: 'vavuniya_bsc_marketing', text: 'Bachelor of Science Honours in Marketing Management', image: '' },
+        { id: 'vavuniya_bict', text: 'Bachelor of Information and Communication Technology.', image: '' }
+    ],
+    uvap_uni_bach: [
+        { id: 'uvap_bva', text: 'Bachelor of Visual Arts', image: '' },
+        { id: 'uvap_bpa', text: 'Bachelor of Performing Arts', image: '' }
+    ],
+    se_uni_bach: [
+        { id: 'se_bsc_gen', text: 'Bachelor of Science (General)', image: '' },
+        { id: 'se_bsc_cs', text: 'Bachelor of Science Honours Degree in Computer Science', image: '' },
+        { id: 'se_applied_stats', text: 'Applied Statistics', image: '' },
+        { id: 'se_math', text: 'Mathematics', image: '' },
+        { id: 'se_applied_bio', text: 'Applied Biology', image: '' },
+        { id: 'se_botany', text: 'Botany', image: '' },
+        { id: 'se_physics', text: 'Physics', image: '' },
+        { id: 'se_chemistry', text: 'Chemistry', image: '' },
+        { id: 'se_bcom', text: 'Bachelor of Commerce (BCom) degrees', image: '' }
+    ],
+    open_uni_bach: [
+        { id: 'open_mba_hrm', text: 'MBA in Human Resource Management (MBA in HRM)', image: '' },
+        { id: 'open_short_eng', text: 'Short Course in English for Employment', image: '' },
+        { id: 'open_web_dev', text: 'Professional Web Development Using Joomla & Wordpress', image: '' },
+        { id: 'open_bed_primary', text: 'Bachelor of Education Honours in Primary Education', image: '' },
+        { id: 'open_pgd_special', text: 'PGD in Special Needs Education', image: '' },
+        { id: 'open_bse_honours', text: 'Bachelor of Software Engineering Honours', image: '' },
+        { id: 'open_bms', text: 'Bachelor of Management Studies', image: '' }
+    ],
+    gampaha_uni_bach: [
+        { id: 'gampaha_bams', text: 'Bachelor of Ayurveda Medicine and Surgery (BAMS)', image: '' },
+        { id: 'gampaha_ind_med', text: 'Indigenous Medicinal Resources', image: '' },
+        { id: 'gampaha_health_tourism', text: 'Health Tourism and Hospitality Management', image: '' },
+        { id: 'gampaha_biomed_tech', text: 'Biomedical Technology', image: '' },
+        { id: 'gampaha_social_studies', text: 'Social Studies in Indigenous Knowledge', image: '' }
+    ],
+    faculties_bach: [
+        { id: 'colombo_faculties', text: 'Colombo University Faculties', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0GBULN5RoVaOiewrmVLknLkR-gNo_1dEqGg&s' },
+        { id: 'jpura_faculties', text: 'Sri Jayawardhanapura University Faculties', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStBrDhpxvFrsPg2BIH7NVfeOdnEFKriTOnIw&s' },
+        { id: 'kelaniya_faculties', text: 'Kelaniya University Faculties', image: 'https://upload.wikimedia.org/wikipedia/en/e/e0/Kelaniya.png' },
+        { id: 'peradeniya_faculties', text: 'Peradeniya University Faculties', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2XsX00Umptg_nU31mh5MeMnJaWm4S9-SDug&s' },
+        { id: 'moratuwa_faculties', text: 'Moratuwa University Faculties', image: 'https://upload.wikimedia.org/wikipedia/en/6/60/University_of_Moratuwa_logo.png' },
+        { id: 'uva_faculties', text: 'Uva Wellassa University Faculties', image: 'https://upload.wikimedia.org/wikipedia/commons/9/93/Logo_uwu.jpg' },
+        { id: 'sabaragamuwa_faculties', text: 'Sabaragamuwa University Faculties', image: 'https://upload.wikimedia.org/wikipedia/en/5/5a/Logo-SUSL.png' },
+        { id: 'ruhuna_faculties', text: 'Ruhuna University Faculties', image: 'https://upload.wikimedia.org/wikipedia/en/2/2e/University_of_Ruhuna_logo.png' },
+        { id: 'wayamba_faculties', text: 'Wayamba University Faculties', image: 'https://upload.wikimedia.org/wikipedia/en/8/8d/Wayabauniversity.png' },
+        { id: 'rajarata_faculties', text: 'Rajarata University Faculties', image: 'https://upload.wikimedia.org/wikipedia/en/a/a5/Rajarata_logo.png' },
+        { id: 'jaffna_faculties', text: 'Jaffna University Faculties', image: 'https://upload.wikimedia.org/wikipedia/en/b/b9/UoJ_logo.png' },
+        { id: 'eastern_faculties', text: 'Eastern University Faculties', image: 'https://upload.wikimedia.org/wikipedia/en/a/a0/EUSL_logo2.png' },
+        { id: 'vauniya_faculties', text: 'Vavuniya University Faculties', image: 'https://vau.ac.lk/wp-content/uploads/2021/08/University-of-Vavuniya-Logo-1024x1024.png' },
+        { id: 'uvap_faculties', text: 'Visual and Performing Arts Faculties', image: 'https://upload.wikimedia.org/wikipedia/en/d/dd/University_of_the_Visual_and_Performing_Arts.gif' },
+        { id: 'se_faculties', text: 'South Eastern University Faculties', image: 'https://upload.wikimedia.org/wikipedia/en/6/6c/South_Eastern_University_of_Sri_Lanka_logo.png' },
+        { id: 'open_uni_faculties', text: 'Open University Faculties', image: 'https://upload.wikimedia.org/wikipedia/en/8/8e/Logo_ousl.jpg' },
+        { id: 'gampaha_faculties', text: 'Gampaha Wickramarachchi University Faculties', image: 'https://upload.wikimedia.org/wikipedia/commons/9/93/Logo_uwu.jpg' }
+    ],
+    // ...existing code for faculties and degree programs (add details for each faculty and degree as per user request)...
+    // Example for Colombo University Faculties
+    colombo_faculties: [
+        { id: 'arts_colombo', text: 'Arts', image: '' },
+        { id: 'education_colombo', text: 'Education', image: '' },
+        { id: 'grad_studies_colombo', text: 'Graduate Studies', image: '' },
+        { id: 'indigenous_med_colombo', text: 'Indigenous Medicine', image: '' },
+        { id: 'law_colombo', text: 'LAW', image: '' },
+        { id: 'management_colombo', text: 'Management & Finance', image: '' },
+        { id: 'medicine_colombo', text: 'Medicine', image: '' },
+        { id: 'science_colombo', text: 'Science', image: '' },
+        { id: 'technology_colombo', text: 'Technology', image: '' },
+        { id: 'nursing_colombo', text: 'Nursing', image: '' }
+    ],
+    arts_colombo: [
+        { id: 'llb_colombo', text: 'Bachelor of Laws', image: '' },
+        { id: 'mbbs_colombo', text: 'Bachelor of Medicine', image: '' },
+        { id: 'surgery_colombo', text: 'Bachelor of Surgery', image: '' }
+    ],
+    // ...repeat for other universities and faculties, adding degree programs as described...
+    // Example for Postgraduates
+    pgdiplomas: [
+        { id: 'pgde', text: 'Postgraduate Diploma in Education', image: '' },
+        { id: 'pgbm', text: 'Postgraduate Diploma in Business Management', image: '' },
+        { id: 'pgsinhala', text: 'Postgraduate Diploma in Sinhala', image: '' }
+    ],
+    masters: [
+        { id: 'msc_hrm', text: 'MBA in Human Resource Management', image: '' },
+        { id: 'msc_it', text: 'M.Sc. in Information Technology', image: '' }
+    ],
+    phd: [
+        { id: 'phd_general', text: 'Doctor of Philosophy (PhD)', image: '' }
+    ],
+    // ...existing code...
+    // Faculties for state universities
+    colombo_uni_bach_faculties: [
+        { id: 'colombo_arts', text: 'Arts', image: '' },
+        { id: 'colombo_education', text: 'Education', image: '' },
+        { id: 'colombo_grad_studies', text: 'Graduate Studies', image: '' },
+        { id: 'colombo_indigenous_med', text: 'Indigenous Medicine', image: '' },
+        { id: 'colombo_law', text: 'LAW', image: '' },
+        { id: 'colombo_management', text: 'Management & Finance', image: '' },
+        { id: 'colombo_medicine', text: 'Medicine', image: '' },
+        { id: 'colombo_science', text: 'Science', image: '' },
+        { id: 'colombo_technology', text: 'Technology', image: '' },
+        { id: 'colombo_nursing', text: 'Nursing', image: '' }
+    ],
+    jpura_uni_bach_faculties: [
+        { id: 'jpura_humanities', text: 'Humanities and Social Sciences', image: '' },
+        { id: 'jpura_applied_sciences', text: 'Applied Sciences', image: '' },
+        { id: 'jpura_management', text: 'Management Studies and Commerce', image: '' },
+        { id: 'jpura_medical_sciences', text: 'Medical Sciences', image: '' },
+        { id: 'jpura_grad_studies', text: 'Graduate Studies', image: '' },
+        { id: 'jpura_engineering', text: 'Engineering', image: '' },
+        { id: 'jpura_technology', text: 'Technology', image: '' },
+        { id: 'jpura_allied_health', text: 'Allied Health Sciences', image: '' },
+        { id: 'jpura_dental', text: 'Dental Sciences', image: '' },
+        { id: 'jpura_urban_aquatic', text: 'Urban and Aquatic Bioresources', image: '' },
+        { id: 'jpura_computing', text: 'Computing', image: '' }
+    ],
+    kelaniya_uni_bach_faculties: [
+        { id: 'kelaniya_commerce', text: 'Commerce and Management Studies', image: '' },
+        { id: 'kelaniya_computing', text: 'Computing and Technology', image: '' },
+        { id: 'kelaniya_humanities', text: 'Humanities', image: '' },
+        { id: 'kelaniya_medicine', text: 'Medicine', image: '' },
+        { id: 'kelaniya_science', text: 'Science', image: '' },
+        { id: 'kelaniya_social_sciences', text: 'Social Sciences', image: '' },
+        { id: 'kelaniya_grad_studies', text: 'Graduate Studies', image: '' }
+    ],
+    peradeniya_uni_bach_faculties: [
+        { id: 'peradeniya_agriculture', text: 'Agriculture', image: '' },
+        { id: 'peradeniya_allied_health', text: 'Allied Health Sciences', image: '' },
+        { id: 'peradeniya_arts', text: 'Arts', image: '' },
+        { id: 'peradeniya_dental', text: 'Dental Sciences', image: '' },
+        { id: 'peradeniya_engineering', text: 'Engineering', image: '' },
+        { id: 'peradeniya_management', text: 'Management', image: '' },
+        { id: 'peradeniya_medicine', text: 'Medicine', image: '' },
+        { id: 'peradeniya_science', text: 'Science', image: '' },
+        { id: 'peradeniya_vet_med', text: 'Veterinary Medicine', image: '' },
+        { id: 'peradeniya_animal_science', text: 'Animal Science', image: '' }
+    ],
+    moratu_uni_bach_faculties: [
+        { id: 'moratuwa_engineering', text: 'Engineering', image: '' },
+        { id: 'moratuwa_it', text: 'IT', image: '' },
+        { id: 'moratuwa_architecture', text: 'Architecture', image: '' },
+        { id: 'moratuwa_business', text: 'Business', image: '' },
+        { id: 'moratuwa_medicine', text: 'Medicine', image: '' },
+        { id: 'moratuwa_grad_studies', text: 'Graduate Studies', image: '' }
+    ],
+    uva_uni_bach_faculties: [
+        { id: 'uva_animal_export', text: 'Faculty of Animal Science and Export Agriculture', image: '' },
+        { id: 'uva_applied_sciences', text: 'Faculty of Applied Sciences', image: '' },
+        { id: 'uva_management', text: 'Faculty of Management', image: '' },
+        { id: 'uva_technological', text: 'Faculty of Technological Studies', image: '' }
+    ],
+    abara_uni_bach_faculties: [
+        { id: 'saba_agricultural', text: 'Agricultural Sciences', image: '' },
+        { id: 'saba_applied_sciences', text: 'Applied Sciences', image: '' },
+        { id: 'saba_computing', text: 'Computing', image: '' },
+        { id: 'saba_geomatics', text: 'Geomatics', image: '' },
+        { id: 'saba_grad_studies', text: 'Graduate Studies', image: '' },
+        { id: 'saba_management', text: 'Management Studies', image: '' },
+        { id: 'saba_medicine', text: 'Medicine', image: '' },
+        { id: 'saba_social_sciences', text: 'Social Sciences and Languages', image: '' },
+        { id: 'saba_technology', text: 'Technology', image: '' }
+    ],
+    ruhuna_uni_bach_faculties: [
+        { id: 'ruhuna_agriculture', text: 'Agriculture', image: '' },
+        { id: 'ruhuna_allied_health', text: 'Allied Health Sciences', image: '' },
+        { id: 'ruhuna_engineering', text: 'Engineering', image: '' },
+        { id: 'ruhuna_grad_studies', text: 'Graduate Studies', image: '' },
+        { id: 'ruhuna_humanities', text: 'Humanities and Social Sciences', image: '' },
+        { id: 'ruhuna_management', text: 'Management and Finance', image: '' },
+        { id: 'ruhuna_fisheries', text: 'Fisheries and Marine Sciences & Technology', image: '' }
+    ],
+    wayaba_uni_bach_faculties: [
+        { id: 'wayamba_agri_plant', text: 'Faculty of Agriculture & Plantation Management', image: '' },
+        { id: 'wayamba_applied_sciences', text: 'Faculty of Applied Sciences', image: '' },
+        { id: 'wayamba_business_finance', text: 'Faculty of Business Studies & Finance', image: '' },
+        { id: 'wayamba_livestock', text: 'Faculty of Livestock, Fisheries & Nutrition', image: '' },
+        { id: 'wayamba_technology', text: 'Faculty of Technology', image: '' },
+        { id: 'wayamba_medicine', text: 'Faculty of Medicine', image: '' }
+    ],
+    rajarata_uni_bach_faculties: [
+        { id: 'rajarata_agriculture', text: 'Faculty of Agriculture', image: '' },
+        { id: 'rajarata_applied_sciences', text: 'Faculty of Applied Sciences', image: '' },
+        { id: 'rajarata_management', text: 'Faculty of Management Studies', image: '' },
+        { id: 'rajarata_medicine', text: 'Faculty of Medicine and Allied Sciences', image: '' },
+        { id: 'rajarata_social_sciences', text: 'Faculty of Social Sciences and Humanities', image: '' },
+        { id: 'rajarata_technology', text: 'Faculty of Technology', image: '' }
+    ],
+    jaffana_uni_bach_faculties: [
+        { id: 'jaffna_agriculture', text: 'Agriculture', image: '' },
+        { id: 'jaffna_alied_health', text: 'Alied Health Science', image: '' },
+        { id: 'jaffna_applied_science', text: 'Applied Science', image: '' },
+        { id: 'jaffna_arts', text: 'Arts', image: '' },
+        { id: 'jaffna_business', text: 'Business Studies', image: '' },
+        { id: 'jaffna_engineering', text: 'Engineering', image: '' },
+        { id: 'jaffna_grad_studies', text: 'Graduate Studies', image: '' },
+        { id: 'jaffna_hindu', text: 'Hindu Studies', image: '' },
+        { id: 'jaffna_management', text: 'Management Studies and Commerce', image: '' },
+        { id: 'jaffna_medicine', text: 'Medicine', image: '' },
+        { id: 'jaffna_science', text: 'Science', image: '' },
+        { id: 'jaffna_technology', text: 'Technology', image: '' },
+        { id: 'jaffna_technological', text: 'Technological Studies', image: '' }
+    ],
+    estan_uni_bach_faculties: [
+        { id: 'eastern_agriculture', text: 'Faculty of Agriculture', image: '' },
+        { id: 'eastern_science', text: 'Faculty of Science', image: '' },
+        { id: 'eastern_commerce', text: 'Faculty of Commerce and Management', image: '' },
+        { id: 'eastern_arts', text: 'Faculty of Arts and Culture', image: '' },
+        { id: 'eastern_health', text: 'Faculty of Health-Care Sciences', image: '' },
+        { id: 'eastern_technology', text: 'Faculty of Technology', image: '' }
+    ],
+    vauniya_uni_bach_faculties: [
+        { id: 'vavuniya_applied_science', text: 'Faculty of Applied Science', image: '' },
+        { id: 'vavuniya_business', text: 'Faculty of Business Studies', image: '' },
+        { id: 'vavuniya_technological', text: 'Faculty of Technological Studies', image: '' }
+    ],
+    uvap_uni_bach_faculties: [
+        { id: 'uvap_music', text: 'Faculty of Music', image: '' },
+        { id: 'uvap_visual_arts', text: 'Faculty of Visual Arts', image: '' },
+        { id: 'uvap_dance_drama', text: 'Faculty of Dance and Drama', image: '' }
+    ],
+    se_uni_bach_faculties: [
+        { id: 'se_management', text: 'Management & commerce', image: '' },
+        { id: 'se_arts', text: 'Arts & Culture', image: '' },
+        { id: 'se_applied_sciences', text: 'Applied Sciences', image: '' },
+        { id: 'se_islamic', text: 'Islamic Studies & Arabic Languages', image: '' },
+        { id: 'se_engineering', text: 'Engineering and Technology', image: '' }
+    ],
+    open_uni_bach_faculties: [
+        { id: 'open_education', text: 'Faculty of Education', image: '' },
+        { id: 'open_engineering', text: 'Faculty of Engineering Technology', image: '' },
+        { id: 'open_humanities', text: 'Faculty of Humanities and Social Sciences', image: '' }
+    ],
+    gampaha_uni_bach_faculties: [
+        { id: 'gampaha_ind_med', text: 'Faculty of Indigenous Medicine', image: '' },
+        { id: 'gampaha_health_sciences', text: 'Faculty of Indigenous Health Sciences and Technology', image: '' },
+        { id: 'gampaha_social_mgmt', text: 'Faculty of Indigenous Social Sciences and Management Studies', image: '' },
+        { id: 'gampaha_grad_studies', text: 'Faculty of Graduate Studies', image: '' }
     ],
     hnd_etc_al_passed: [
         { id: 'hnd_alp', text: 'HND', image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/SLIATE_LOGO2.png/250px-SLIATE_LOGO2.png' },
